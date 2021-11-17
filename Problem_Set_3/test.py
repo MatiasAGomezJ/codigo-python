@@ -1,14 +1,3 @@
-#Dictionaries of Dictionaries (of Dictionaries)
-
-#The next several questions concern the data structure below for keeping 
-#track of Udacity's courses (where all of the values are strings):
-  
-#    { <hexamester>, { <class>: { <property>: <value>, ... },
-#                                     ... },
-#      ... }
-
-#For example,
-
 courses = {
     'feb2012': { 'cs101': {'name': 'Building a Search Engine',
                            'teacher': 'Dave',
@@ -40,38 +29,3 @@ courses = {
                            'teacher': 'Jasper'},
                      }
     }
-
-# #Define a procedure courses_offered() taht returns a list of all the courses offered in the given
-#hexamester:
-
-def courses_offered(courses, hexamester):
-    if hexamester not in courses.keys():
-        return False
-
-    lista = list(courses[hexamester].keys())
-    return lista
-
-print(courses_offered(courses,'feb2012'))
-
-#Define a procedure, is_offered(courses, course, hexamester), that returns True
-#if the input course is offered in the input hexamester, and returns False
-#otherwise.  For example,
-
-#print is_offered(courses, 'cs101', 'apr2012') => True
-#print is_offered(courses, 'cs003', 'apr2012') => False
-
-#(Note: it is okay if your procedure produces an error if the input hexamester is not included in courses.  
-#For example, is_offered(courses, 'cs101', 'dec2011') can produce an error.)
-
-
-def is_offered(courses, course, hexamester):
-    cl = courses_offered(courses, hexamester)
-    if course not in cl:
-        return False
-
-print(is_offered(courses, 'cs101', 'apr2012'))
-# True
-print(is_offered(courses, 'cs003', 'apr2012'))
-# False
-print(is_offered(courses, 'cs101', 'may2012'))
-# KeyError => False
