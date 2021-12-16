@@ -36,7 +36,7 @@ class House:
         return_string += 'has a garage'
         return return_string
     
-    def get_basic_information(self):
+    def print_basic_information(self):
         print(self.get_existence())
         print(self.get_name())
         print(self.get_windows())

@@ -36,7 +36,7 @@ def main():
     neighborhood.append(house4)
 
     for house in neighborhood:
-        house.get_basic_information()
+        house.print_basic_information()
 
         if neighborhood.index(house) != len(neighborhood) - 1:
             print(sep)
