@@ -1,9 +1,7 @@
 from os import system
 
-from House.House import House
+from House import House
 system('clear')
-
-from House import *
 
 def main():
     sep = '-' * 29
